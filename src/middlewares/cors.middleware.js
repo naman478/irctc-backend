@@ -6,3 +6,5 @@ const corsMiddleware = cors({
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization'
 });
+
+module.exports = { corsMiddleware };

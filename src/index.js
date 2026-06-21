@@ -1,12 +1,12 @@
 const express = require('express');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
-const logger = require('./utils/logger');
+const logger = require('./config/logger');
 const config = require('./config');
 
-const {corsMiddleware} = require('./middlewares/cors.middleware');
-const {reqLoggerMiddleware} = require('./middlewares/req-logger.middleware');
-const {errorHandlerMiddleware} = require('./middlewares/error-handler.middleware');
+const {corsMiddleware} = require('./middlewares/cors.middleware.js');
+const {reqLoggerMiddleware} = require('./middlewares/req-logger.middleware.js');
+const {errorHandlerMiddleware} = require('./middlewares/error-handler.middleware.js');
 
 const app = express();
 

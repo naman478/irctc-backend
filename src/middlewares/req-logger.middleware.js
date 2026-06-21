@@ -1,4 +1,4 @@
-const logger = require('../utils/logger');
+const logger = require('../config/logger');
 
 // const reqLoggerMiddleware = (req, res, next) => {
 //     logger.info(`Incoming request: ${req.method} ${req.originalUrl}`);
@@ -15,3 +15,5 @@ const reqLoggerMiddleware = (req, res, next) => {
     });
     next();
 };
+
+module.exports = { reqLoggerMiddleware };

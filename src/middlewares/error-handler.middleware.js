@@ -1,5 +1,5 @@
 const {AppError} = require('../utils/error');
-const logger = require('../utils/logger');
+const logger = require('../config/logger');
 
 const errorHandlerMiddleware = (err, req, res, next) => {
     logger.error(`Error: ${err.message}`, { stack: err.stack });
@@ -9,3 +9,5 @@ const errorHandlerMiddleware = (err, req, res, next) => {
         code: err.code
     });
 };
+
+module.exports = { errorHandlerMiddleware };
